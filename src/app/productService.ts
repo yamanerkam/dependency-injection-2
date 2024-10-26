@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 
-@Injectable()
+@Injectable({providedIn:'root'})
 export class ProductService{
     constructor(log: logService){
 
@@ -19,6 +19,7 @@ export class Product{
     quantity:number | undefined;
 }
 
+@Injectable({providedIn:'root'})
 export class logService{
     log(){
         console.log('logging...')
